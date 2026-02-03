@@ -1,89 +1,101 @@
-# introduction_to_Retrival_Ugmented_generation
-🔍 RAG Practice Project (LLM + Embeddings + Vector Database)
+🔍 Retrieval-Augmented Generation (RAG) Practice & Mini Projects
+Overview
 
+This repository contains hands-on implementations and mini projects built while learning Retrieval-Augmented Generation (RAG) concepts using Large Language Models, embeddings, and vector-based retrieval.
 
-📌 Overview
+The goal of this project is to understand how external knowledge can be integrated into LLM workflows and how such systems can be monitored and evaluated.
 
-This project is a practice implementation of Retrieval-Augmented Generation (RAG). It demonstrates how Large Language Models (LLMs) can be enhanced with external knowledge using text embeddings and vector databases to provide more accurate and context-aware responses.
+🧠 Key Concepts Covered
 
-The project focuses on understanding the workflow behind modern AI applications such as chatbots, document Q&A systems, and knowledge retrieval tools.
+Document loading and chunking
 
-🧠 What is RAG?
+Embedding generation
 
-Retrieval-Augmented Generation (RAG) is an AI technique that combines:
+Vector storage and semantic retrieval
 
-Retrieval → Fetching relevant data from external sources
+Query-based context augmentation
 
-Generation → Using an LLM to generate meaningful responses
+LLM response generation
 
-Instead of relying only on pre-trained knowledge, RAG allows LLMs to use custom data.
+Persistent indexing
 
-⚙️ Technologies Used
+Observability and tracing using Arize Phoenix
+
+🛠️ Tech Stack
 
 Python
 
-LLM Integration (OpenAI / Local LLM / HuggingFace)
+LlamaIndex
 
-Embeddings Model
+Vector Index (local)
 
-Vector Database (FAISS / Chroma / Pinecone etc.)
+Arize Phoenix
 
-LlamaIndex 
+OpenInference Instrumentation
 
-Observability
+GitHub Codespaces
 
-🏗️ Project Workflow
+Jupyter Notebook / VS Code
 
-1️⃣ Data Loading
+🏗️ RAG Pipeline Workflow
+User Query
+   ↓
+Query Embedding
+   ↓
+Vector Search
+   ↓
+Relevant Context Retrieval
+   ↓
+LLM Response Generation
 
-Documents or text files are loaded into the system.
+🔎 Observability with Arize Phoenix
 
-Text data is prepared for processing.
+This project integrates Arize Phoenix to monitor and analyze the RAG pipeline.
 
-2️⃣ Text Chunking
+Phoenix enables:
 
-Large documents are split into smaller chunks.
+Tracing of LLM requests and responses
 
-Improves retrieval accuracy and embedding quality.
+Visualization of retrieved documents
 
-3️⃣ Embedding Generation
+Token usage and latency analysis
 
-Text chunks are converted into numerical vector representations.
+Debugging retrieval quality
 
-These embeddings capture semantic meaning of the text.
+Phoenix Integration Example
+import phoenix as px
+from openinference.instrumentation.llama_index import LlamaIndexInstrumentor
 
-4️⃣ Vector Storage
+px.launch_app()
+LlamaIndexInstrumentor().instrument()
 
-Generated embeddings are stored in a vector database.
+🖥️ Development Environment
 
-Enables similarity-based searching.
+This project was developed and executed using GitHub Codespaces, providing a cloud-based development environment with reproducible setup and execution.
 
-5️⃣ Query Processing
+📌 Learning Outcomes
 
-User query is converted into embedding.
+Designed end-to-end RAG pipelines
 
-🔎 Observability & Monitoring with Arize Phoenix
+Implemented semantic search using embeddings
 
-This project integrates Arize Phoenix to monitor and evaluate the Retrieval-Augmented Generation (RAG) pipeline.
+Integrated observability into LLM workflows
 
-Phoenix helps visualize how the LLM interacts with embeddings, retrieval steps, and generated responses, making debugging and performance evaluation easier.
+Gained practical experience with AI system debugging
 
-🚀 Why Phoenix?
+🔮 Future Improvements
 
-Tracks LLM requests and responses
+Add UI using Streamlit
 
-Monitors retrieval quality
+Support multiple document formats
 
-Helps debug hallucinations
+Add evaluation metrics for retrieval quality
 
-Visualizes token usage and latency
+Deploy as an API
 
-Provides evaluation insights for RAG pipelines
+👩‍💻 Author
 
-Similar documents are retrieved from vector database.
+Rupsha Debnath
+GitHub: https://github.com/Rupu-techu
 
-6️⃣ Response Generation
-
-Retrieved documents are passed to LLM.
-
-LLM generates final contextual answer.
+LinkedIn: https://www.linkedin.com/in/rupsha-debnath-056739317/
