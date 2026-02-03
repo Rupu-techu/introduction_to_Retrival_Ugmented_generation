@@ -62,6 +62,24 @@ Enables similarity-based searching.
 
 User query is converted into embedding.
 
+🔎 Observability & Monitoring with Arize Phoenix
+
+This project integrates Arize Phoenix to monitor and evaluate the Retrieval-Augmented Generation (RAG) pipeline.
+
+Phoenix helps visualize how the LLM interacts with embeddings, retrieval steps, and generated responses, making debugging and performance evaluation easier.
+
+🚀 Why Phoenix?
+
+Tracks LLM requests and responses
+
+Monitors retrieval quality
+
+Helps debug hallucinations
+
+Visualizes token usage and latency
+
+Provides evaluation insights for RAG pipelines
+
 Similar documents are retrieved from vector database.
 
 6️⃣ Response Generation
