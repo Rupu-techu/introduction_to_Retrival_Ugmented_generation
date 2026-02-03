@@ -1,5 +1,7 @@
 # introduction_to_Retrival_Ugmented_generation
 🔍 RAG Practice Project (LLM + Embeddings + Vector Database)
+
+
 📌 Overview
 
 This project is a practice implementation of Retrieval-Augmented Generation (RAG). It demonstrates how Large Language Models (LLMs) can be enhanced with external knowledge using text embeddings and vector databases to provide more accurate and context-aware responses.
