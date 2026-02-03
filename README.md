@@ -28,9 +28,12 @@ Embeddings Model
 
 Vector Database (FAISS / Chroma / Pinecone etc.)
 
-LlamaIndex / LangChain (if used)
+LlamaIndex 
+
+Observability
 
 🏗️ Project Workflow
+
 1️⃣ Data Loading
 
 Documents or text files are loaded into the system.
